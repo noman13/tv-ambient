@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/noman13/tv-ambient/releases/latest"><img src="https://img.shields.io/github/v/release/noman13/tv-ambient?label=download" alt="Latest release"></a>
+  <a href="https://github.com/noman13/tv-ambient/releases/latest"><img src="https://img.shields.io/github/v/release/noman13/tv-ambient?label=download&cacheSeconds=3600" alt="Latest release"></a>
   <img src="https://img.shields.io/badge/Android%20TV-8%E2%80%9316-3DDC84" alt="Android TV 8–16">
   <img src="https://img.shields.io/badge/core-Rust%20no__std-B7410E" alt="Rust no_std core">
   <img src="https://img.shields.io/badge/app-Kotlin-7F52FF" alt="Kotlin app">
@@ -199,3 +199,9 @@ and safe.
 ## Licence
 
 [MIT](LICENSE). Third-party licences are listed above and in [`LICENSES/`](LICENSES/).
+
+## Releases
+
+Every version, with its signed APK, SHA-256 checksum and release notes, is on the
+[Releases page](https://github.com/noman13/tv-ambient/releases). The newest one is always at
+[releases/latest](https://github.com/noman13/tv-ambient/releases/latest).
