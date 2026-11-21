@@ -1,0 +1,10 @@
+[package]
+name = "tvambient-core"
+description = "TV Ambient's analysis, colour, effects and output core: pure Rust, no Android dependencies"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish = false
+
+[dependencies]

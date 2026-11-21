@@ -1,0 +1,46 @@
+# Expected outputs for the golden tests (README.md), made by a reference implementation of the same pipeline.
+# Paths are relative to the repo root. Settings not given are the reference's defaults (each CSV lists them all).
+# Variants:
+#   border-off      border=0
+#   layout-variant  top=40 right=22 bottom=40 left=22 gap=4 direction=1 offset=10 depth_tb=15 depth_lr=12
+#   picture-variant bright=100 sat=100 gamma=22 bal_r=90 bal_b=80 black=10
+
+selftest
+
+# Per frame: crop, raw LED averages, black guard, processed colours.
+frames core/tests/golden/frames/bright-cuts.tvaf core/tests/golden/expected/bright-cuts.default.csv
+frames core/tests/golden/frames/seekbar-overlay.tvaf core/tests/golden/expected/seekbar-overlay.default.csv
+frames core/tests/golden/frames/letterbox-dark.tvaf core/tests/golden/expected/letterbox-dark.default.csv
+frames core/tests/golden/frames/letterbox-near-black.tvaf core/tests/golden/expected/letterbox-near-black.default.csv
+frames core/tests/golden/frames/letterbox-cut-to-bright.tvaf core/tests/golden/expected/letterbox-cut-to-bright.default.csv
+frames core/tests/golden/frames/pillarbox-ui-overlay.tvaf core/tests/golden/expected/pillarbox-ui-overlay.default.csv
+frames core/tests/golden/frames/black-loading.tvaf core/tests/golden/expected/black-loading.default.csv
+
+frames core/tests/golden/frames/bright-cuts.tvaf core/tests/golden/expected/bright-cuts.border-off.csv border=0
+frames core/tests/golden/frames/seekbar-overlay.tvaf core/tests/golden/expected/seekbar-overlay.border-off.csv border=0
+frames core/tests/golden/frames/letterbox-dark.tvaf core/tests/golden/expected/letterbox-dark.border-off.csv border=0
+frames core/tests/golden/frames/letterbox-near-black.tvaf core/tests/golden/expected/letterbox-near-black.border-off.csv border=0
+frames core/tests/golden/frames/letterbox-cut-to-bright.tvaf core/tests/golden/expected/letterbox-cut-to-bright.border-off.csv border=0
+frames core/tests/golden/frames/pillarbox-ui-overlay.tvaf core/tests/golden/expected/pillarbox-ui-overlay.border-off.csv border=0
+frames core/tests/golden/frames/black-loading.tvaf core/tests/golden/expected/black-loading.border-off.csv border=0
+
+frames core/tests/golden/frames/bright-cuts.tvaf core/tests/golden/expected/bright-cuts.layout-variant.csv top=40 right=22 bottom=40 left=22 gap=4 direction=1 offset=10 depth_tb=15 depth_lr=12
+frames core/tests/golden/frames/letterbox-dark.tvaf core/tests/golden/expected/letterbox-dark.layout-variant.csv top=40 right=22 bottom=40 left=22 gap=4 direction=1 offset=10 depth_tb=15 depth_lr=12
+frames core/tests/golden/frames/pillarbox-ui-overlay.tvaf core/tests/golden/expected/pillarbox-ui-overlay.layout-variant.csv top=40 right=22 bottom=40 left=22 gap=4 direction=1 offset=10 depth_tb=15 depth_lr=12
+
+frames core/tests/golden/frames/bright-cuts.tvaf core/tests/golden/expected/bright-cuts.picture-variant.csv bright=100 sat=100 gamma=22 bal_r=90 bal_b=80 black=10
+frames core/tests/golden/frames/letterbox-dark.tvaf core/tests/golden/expected/letterbox-dark.picture-variant.csv bright=100 sat=100 gamma=22 bal_r=90 bal_b=80 black=10
+
+# Output smoothing per LED tick (captures at 20/s, LEDs at 30/s unless set).
+smooth core/tests/golden/frames/bright-cuts.tvaf core/tests/golden/expected/bright-cuts.smooth-6.csv
+smooth core/tests/golden/frames/bright-cuts.tvaf core/tests/golden/expected/bright-cuts.smooth-1.csv smooth=1
+smooth core/tests/golden/frames/bright-cuts.tvaf core/tests/golden/expected/bright-cuts.smooth-10.csv smooth=10
+smooth core/tests/golden/frames/letterbox-cut-to-bright.tvaf core/tests/golden/expected/letterbox-cut-to-bright.smooth-6.csv
+
+# Effects, single colour and dim colour at fixed times.
+effects core/tests/golden/expected/effects.default.csv
+effects core/tests/golden/expected/effects.hue200-sat100.csv hue=200 color_sat=100
+
+# LED sampling rectangles.
+layout core/tests/golden/expected/layout.default.csv
+layout core/tests/golden/expected/layout.layout-variant.csv top=40 right=22 bottom=40 left=22 gap=4 direction=1 offset=10 depth_tb=15 depth_lr=12

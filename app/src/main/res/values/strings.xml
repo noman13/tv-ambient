@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- All user-facing text (DESIGN.md §12): English, written plainly; the same names everywhere (§3). -->
+<resources>
+    <string name="app_name">TV Ambient</string>
+    <string name="shortcuts_label">TV Ambient remote buttons</string>
+    <string name="shortcuts_description">Lets the remote\'s colour buttons start and stop the lights, change the mode and show the stats panel from any app. It only sees those buttons and which app is in front; it never reads what is on screen.</string>
+
+    <!-- common -->
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="auto">Auto</string>
+    <string name="more">More</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="slow">Slow</string>
+    <string name="fast">Fast</string>
+    <string name="soft">Soft</string>
+    <string name="strong">Strong</string>
+    <string name="connected">Connected</string>
+    <string name="not_checked">Not checked yet</string>
+    <string name="press_ok_again">Press OK again to confirm</string>
+    <string name="reset_section">Reset this section</string>
+    <string name="reset_section_hint">Puts every setting on this page back to its default.</string>
+    <string name="settings">Settings</string>
+    <string name="n1">1</string><string name="n2">2</string><string name="n3">3</string><string name="n4">4</string><string name="n5">5</string>
+    <string name="n6">6</string><string name="n7">7</string><string name="n8">8</string><string name="n9">9</string><string name="n10">10</string>
+
+    <!-- section list -->
+    <string name="group_modes">Modes</string>
+    <string name="group_look">Look</string>
+    <string name="group_setup">Setup</string>
+    <string name="group_system">System</string>
+    <string name="sec_screen">Screen mode</string>
+    <string name="sec_music">Music mode</string>
+    <string name="sec_effects">Effects</string>
+    <string name="sec_single">Single colour</string>
+    <string name="sec_switching">Mode switching</string>
+    <string name="sec_picture">Picture</string>
+    <string name="sec_strip">LED strip</string>
+    <string name="sec_remote">Remote buttons</string>
+    <string name="sec_stats">Stats overlay</string>
+    <string name="sec_power">Start-up &amp; power</string>
+    <string name="sec_about">About &amp; help</string>
+
+    <!-- modes -->
+    <string name="mode_screen">Screen</string>
+    <string name="mode_music">Music</string>
+    <string name="mode_effect">Effect</string>
+    <string name="mode_single">Single colour</string>
+
+    <!-- Screen mode -->
+    <string name="capture_method">Capture method</string>
+    <string name="capture_method_hint">Shell screenshots are the smoothest. Screen recording works without USB debugging but costs more and may stutter.</string>
+    <string name="method_auto">Automatic</string>
+    <string name="method_shell">Shell screenshots</string>
+    <string name="method_recording">Screen recording</string>
+    <string name="capture_rate">Captures per second</string>
+    <string name="capture_rate_hint">Adaptive goes up to 30 a second and backs off when the video, CPU or memory are under pressure.</string>
+    <string name="rate_fixed">Fixed</string>
+    <string name="rate_adaptive">Adaptive</string>
+    <string name="capture_rate_fixed">Fixed rate</string>
+    <string name="capture_rate_fixed_hint">Used when Captures per second is Fixed.</string>
+    <string name="capture_rate_fixed_off">Off while Captures per second is Adaptive.</string>
+    <string name="black_bars">Skip black bars</string>
+    <string name="black_bars_hint">Ignores letterbox and pillarbox bars, so the lights follow the picture itself.</string>
+    <string name="dark_reach">Dark-edge reach</string>
+    <string name="dark_reach_hint">How far in to look when the picture\'s edge is dark.</string>
+
+    <!-- Music mode -->
+    <string name="music_look">Look</string>
+    <string name="music_reaction">Reaction</string>
+    <string name="music_silent">When it\'s silent</string>
+    <string name="music_input">Audio input</string>
+    <string name="music_effect">Music effect</string>
+    <string name="music_effect_hint">How the lights show the music. The Blue button\'s short press also steps through them.</string>
+    <string name="palette">Colour palette</string>
+    <string name="palette_hint">The colours the music effect uses.</string>
+    <string name="pal_rainbow">Rainbow</string>
+    <string name="pal_warm">Warm</string>
+    <string name="pal_cool">Cool</string>
+    <string name="pal_neon">Neon</string>
+    <string name="pal_single">Single colour</string>
+    <string name="bright_follows">Brightness follows</string>
+    <string name="bright_follows_hint">Louder music makes brighter lights, or the brightness stays the same.</string>
+    <string name="follows_loudness">Loudness</string>
+    <string name="follows_fixed">Fixed</string>
+    <string name="min_brightness">Minimum brightness</string>
+    <string name="min_brightness_hint">A glow kept during quiet parts, so the room doesn\'t go dark.</string>
+    <string name="sensitivity">Sensitivity</string>
+    <string name="sensitivity_hint">Auto adapts to the volume, so quiet and loud songs both move the lights fully.</string>
+    <string name="beat_response">Beat response</string>
+    <string name="beat_response_hint">How hard the lights jump on a beat.</string>
+    <string name="fade_speed">Fade speed</string>
+    <string name="fade_speed_hint">How quickly the lights settle after a beat.</string>
+    <string name="audio_delay">Audio delay</string>
+    <string name="audio_delay_hint">Lines the lights up with the sound when a soundbar or Bluetooth adds delay.</string>
+    <string name="tap_to_beat">Tap to beat</string>
+    <string name="tap_to_beat_hint">A click plays: press OK in time with it 8 times and the delay is set for you.</string>
+    <string name="after_silence">After 5 s of silence</string>
+    <string name="after_silence_hint">What the lights do when the music stops.</string>
+    <string name="silence_glow">Dim glow</string>
+    <string name="silence_off">Lights off</string>
+    <string name="silence_screen">Switch to Screen mode</string>
+    <string name="silence_keep">Keep last colours</string>
+    <string name="audio_source">Audio source</string>
+    <string name="audio_source_hint">Automatic picks what works. The others are for troubleshooting.</string>
+    <string name="src_auto">Automatic</string>
+    <string name="src_mix">Output mix</string>
+    <string name="src_playback">Playback capture</string>
+    <string name="test_audio">Test audio input</string>
+    <string name="test_audio_hint">Plays a short tone and checks that the lights hear it.</string>
+    <string name="freq_range">Frequency range</string>
+    <string name="freq_range_hint">Which part of the sound drives the lights.</string>
+    <string name="range_full">Full</string>
+    <string name="range_bass">Bass only</string>
+    <string name="range_vocals">Vocals</string>
+    <string name="music_listening">Listening · %1$s</string>
+    <string name="music_play_some">Play some music to see the lights react</string>
+    <string name="tap_now">Press OK on each click (%1$d of 8)</string>
+    <string name="tap_too_few">Too few taps to set the delay: try again.</string>
+    <string name="tap_done">Audio delay set to %1$d ms</string>
+    <string name="audio_test_running">Listening for the test tone…</string>
+    <string name="audio_test_ok">The lights hear the TV\'s sound</string>
+    <string name="audio_test_fail">The lights don\'t hear the test tone</string>
+
+    <!-- Effects -->
+    <string name="effect_flash_note">This effect flashes. It\'s limited to 3 flashes a second, but if flashing lights affect you, choose another.</string>
+    <string name="effect_speed">Speed</string>
+    <string name="effect_hue">Colour</string>
+    <string name="effect_bright">Brightness</string>
+    <string name="effect_in_rotation">In Blue rotation</string>
+    <string name="effect_options_hint">Back closes these options.</string>
+
+    <!-- Single colour -->
+    <string name="hue">Colour</string>
+    <string name="hue_hint">Round the colour wheel: 0° red, 120° green, 240° blue.</string>
+    <string name="colour_strength">Colour strength</string>
+    <string name="colour_strength_hint">0 % is white; 100 % is the full colour.</string>
+    <string name="single_bright_hint">How bright the single colour is.</string>
+
+    <!-- Mode switching -->
+    <string name="rotation_heading">A long Blue press goes through</string>
+    <string name="rotation_hint">At least one mode stays ticked.</string>
+    <string name="long_press">Long press Blue</string>
+    <string name="long_press_hint">Hold Blue for the next mode. A short press changes the music effect or the effect.</string>
+    <string name="long_next_mode">Next mode</string>
+    <string name="long_nothing">Nothing</string>
+    <string name="start_in">Start in</string>
+    <string name="start_in_hint">The mode after a reboot or when the lights are turned on.</string>
+    <string name="start_last">Last mode</string>
+
+    <!-- Picture -->
+    <string name="brightness">Brightness</string>
+    <string name="brightness_hint">How bright the lights are in every mode.</string>
+    <string name="saturation">Saturation</string>
+    <string name="saturation_hint">More makes colours richer; less makes them paler.</string>
+    <string name="gamma">Gamma</string>
+    <string name="gamma_hint">Higher makes dark scenes darker on the wall.</string>
+    <string name="white_balance">White balance</string>
+    <string name="white_balance_hint">Evens out the strip\'s colour so white looks white.</string>
+    <string name="black_level">Black level</string>
+    <string name="black_level_hint">Lower this if dark scenes look grey.</string>
+    <string name="smoothing">Smoothing</string>
+    <string name="smoothing_hint">Higher is calmer; lower reacts faster.</string>
+    <string name="balance_red">Red</string>
+    <string name="balance_green">Green</string>
+    <string name="balance_blue">Blue</string>
+    <string name="balance_hint">The strip shows white while you\'re here: lower a colour that looks too strong.</string>
+
+    <!-- LED strip -->
+    <string name="leds_top">LEDs top</string>
+    <string name="leds_right">LEDs right</string>
+    <string name="leds_bottom">LEDs bottom</string>
+    <string name="leds_left">LEDs left</string>
+    <string name="leds_side_hint">Count the LEDs on this side; the dots round the screen show the result.</string>
+    <string name="leds_total">Total</string>
+    <string name="leds_n">%1$d LEDs</string>
+    <string name="bottom_gap">Bottom gap</string>
+    <string name="bottom_gap_hint">LEDs left out in the middle of the bottom, for a TV stand.</string>
+    <string name="start_corner">Start corner</string>
+    <string name="start_corner_hint">Where LED 1 is.</string>
+    <string name="corner_tl">Top left</string>
+    <string name="corner_tr">Top right</string>
+    <string name="corner_br">Bottom right</string>
+    <string name="corner_bl">Bottom left</string>
+    <string name="direction">Direction</string>
+    <string name="direction_hint">Which way the strip runs from LED 1, seen from the front.</string>
+    <string name="clockwise">Clockwise</string>
+    <string name="counter_clockwise">Counter-clockwise</string>
+    <string name="first_led_offset">First LED offset</string>
+    <string name="first_led_offset_hint">Moves the start along the strip if LED 1 isn\'t exactly in the corner.</string>
+    <string name="depth_tb">Depth top and bottom</string>
+    <string name="depth_lr">Depth sides</string>
+    <string name="depth_hint">How far into the picture each LED looks. The dashed lines show it.</string>
+    <string name="test_heading">Test</string>
+    <string name="test_layout">Layout test</string>
+    <string name="test_layout_hint">Top red, right green, bottom blue, left white; the first LEDs blink yellow.</string>
+    <string name="test_white">White</string>
+    <string name="test_red">Red</string>
+    <string name="test_green">Green</string>
+    <string name="test_blue">Blue</string>
+    <string name="test_grey">Grey 50 %</string>
+    <string name="test_colour_hint">Shown on the screen and the strip together, to compare.</string>
+    <string name="controller_heading">Controller</string>
+    <string name="baud">Baud rate</string>
+    <string name="baud_hint">Must match the controller\'s firmware.</string>
+    <string name="b115200">115 200</string><string name="b230400">230 400</string><string name="b460800">460 800</string>
+    <string name="b500000">500 000</string><string name="b921600">921 600</string><string name="b1000000">1 000 000</string>
+    <string name="b2000000">2 000 000</string>
+    <string name="colour_order">Colour order</string>
+    <string name="colour_order_hint">Change this if red shows as green or blue.</string>
+    <string name="rgb">RGB</string><string name="rbg">RBG</string><string name="grb">GRB</string>
+    <string name="gbr">GBR</string><string name="brg">BRG</string><string name="bgr">BGR</string>
+    <string name="led_rate">LED updates per second</string>
+    <string name="led_rate_hint">How often the strip is updated. More than the baud rate carries is wasted.</string>
+    <string name="led_rate_max">Most at this baud rate</string>
+
+    <!-- Remote buttons -->
+    <string name="remote_shortcuts">Remote shortcuts</string>
+    <string name="remote_shortcuts_hint">Turns the colour buttons on or off. Uses USB debugging, or opens Accessibility settings.</string>
+    <string name="key_red">Red</string>
+    <string name="key_green">Green</string>
+    <string name="key_yellow">Yellow</string>
+    <string name="key_blue">Blue</string>
+    <string name="key_hint">What this button does from any app. A button set to None reaches the app in front.</string>
+    <string name="act_none">None</string>
+    <string name="act_start">Start</string>
+    <string name="act_stop">Stop</string>
+    <string name="act_toggle">On / off</string>
+    <string name="act_stats">Show/hide stats</string>
+    <string name="act_mode">Mode button</string>
+    <string name="act_settings">Open or close settings</string>
+    <string name="not_live_tv">Not in Live TV</string>
+    <string name="not_live_tv_hint">Teletext and HbbTV use the colour buttons, so they pass through in Live TV.</string>
+    <string name="show_message">Show a message</string>
+    <string name="show_message_hint">A short note on screen with the new state, for 2 seconds.</string>
+    <string name="key_test_prompt">Press a colour button now to test it</string>
+    <string name="shortcuts_on">Remote shortcuts · On</string>
+    <string name="shortcuts_off">Remote shortcuts · Off</string>
+
+    <!-- Stats overlay -->
+    <string name="stats_show_now">Show or hide now</string>
+    <string name="stats_show_now_hint">Yellow does this from any app.</string>
+    <string name="stats_layout">Layout</string>
+    <string name="stats_layout_hint">Full lists everything; Compact covers less picture; Ticker is two lines at the edge.</string>
+    <string name="layout_full">Full</string>
+    <string name="layout_compact">Compact</string>
+    <string name="layout_ticker">Ticker</string>
+    <string name="stats_position">Position</string>
+    <string name="stats_position_hint">Which corner. The lights never take colour from the panel.</string>
+    <string name="text_size">Text size</string>
+    <string name="text_size_hint">Size of the panel\'s text.</string>
+    <string name="refresh">Refresh every</string>
+    <string name="refresh_hint">How often the numbers update.</string>
+    <string name="s05">0.5 s</string>
+    <string name="s1">1 s</string>
+    <string name="s2">2 s</string>
+    <string name="record_file">Record to file</string>
+    <string name="record_file_hint">CSV in Android/data/io.github.noman13.tvambient/files/stats, one row per refresh.</string>
+    <string name="stats_heading">Stats</string>
+    <string name="stats_lights">Lights</string>
+    <string name="stats_video">Video</string>
+    <string name="stats_cpu">CPU</string>
+    <string name="stats_memory">Memory</string>
+    <string name="stats_bandwidth">Bandwidth</string>
+    <string name="stats_music_mode">Music and mode</string>
+    <string name="stats_group_hint">Choose which of these the panel shows.</string>
+    <string name="stat_capture_rate">Capture rate</string>
+    <string name="stat_capture_time">Capture time</string>
+    <string name="stat_capture_path">Capture path</string>
+    <string name="stat_led_rate">LED rate and USB link</string>
+    <string name="stat_video_fps">Video fps</string>
+    <string name="stat_late">Late frames</string>
+    <string name="stat_display">Display mode</string>
+    <string name="stat_foreground">App in front</string>
+    <string name="stat_cpu_ours">App and helper CPU</string>
+    <string name="stat_cpu_system">System CPU</string>
+    <string name="stat_cpu_display">Display services CPU</string>
+    <string name="stat_cpu_freq">CPU frequency</string>
+    <string name="stat_mem_ours">App and helper memory</string>
+    <string name="stat_mem_device">Device memory</string>
+    <string name="stat_usb">USB (LEDs)</string>
+    <string name="stat_network">Network</string>
+    <string name="stat_music">Audio level, tempo, source</string>
+    <string name="stat_mode">Current mode</string>
+    <string name="stat_hint">OK turns it on or off; the panel updates if it\'s showing.</string>
+
+    <!-- Start-up & power -->
+    <string name="start_on_boot">Start on boot</string>
+    <string name="start_on_boot_hint">Turn the lights on when the TV starts.</string>
+    <string name="starts_on_boot">Starts on boot</string>
+    <string name="manual_start">Starts by hand</string>
+    <string name="screen_off">When the screen turns off</string>
+    <string name="screen_off_hint">What the strip does while the TV\'s screen is off.</string>
+    <string name="screen_off_dark">Lights off</string>
+    <string name="screen_off_keep">Keep last colours</string>
+    <string name="usb_debugging">USB debugging</string>
+    <string name="check_shell">Check USB debugging</string>
+    <string name="check_shell_hint">Connects to the TV\'s own ADB, as the lights do. Accept \"Allow USB debugging?\" the first time.</string>
+    <string name="first_run_again">Set up again</string>
+    <string name="first_run_again_hint">Walks through the controller, USB debugging and the strip once more.</string>
+
+    <!-- About & help -->
+    <string name="version">Version</string>
+    <string name="help_no_lights">The lights don\'t turn on</string>
+    <string name="help_no_sound">Music mode doesn\'t react</string>
+    <string name="help_buttons">The colour buttons do nothing</string>
+    <string name="help_stutter">The video stutters</string>
+    <string name="licences">Licences</string>
+    <string name="reset_all">Reset everything</string>
+    <string name="reset_all_hint">Every setting back to its default. The lights restart.</string>
+    <string name="help_no_lights_text">1. Check the controller is plugged in: Home shows the USB state while the lights are on.\n2. The first time, Android asks to allow the app to use the controller: press OK.\n3. Check the baud rate matches the controller\'s firmware (LED strip › Controller).\n4. Press Red to turn the lights on, or use Home.</string>
+    <string name="help_no_sound_text">Music mode listens to what the TV plays. It can\'t hear Live TV\'s tuner or sound sent as Dolby to a soundbar.\n\nIn Music mode › Audio source, try Output mix, then Playback capture (Android 13 and later), and use Test audio input.</string>
+    <string name="help_buttons_text">The colour buttons need Remote shortcuts on (Settings › Remote buttons). With USB debugging allowed, the app turns it on itself; otherwise turn on \"TV Ambient remote buttons\" in Android\'s Accessibility settings.\n\nIn Live TV the buttons pass through to teletext unless you change \"Not in Live TV\".</string>
+    <string name="help_stutter_text">Capturing the screen costs the TV some work. Lower Screen mode › Captures per second, or use Shell screenshots instead of Screen recording.\n\n4K at 60 frames a second is the hardest case on this kind of TV.</string>
+    <string name="licences_text">TV Ambient: MIT licence.\n\nusb-serial-for-android (mik3y): MIT licence.\n\nInter typeface (Rasmus Andersson and contributors): SIL Open Font License 1.1.\n\nThe icon\'s letters are our own dot-matrix drawing.\n\nTV Ambient does not copy screens, text, icons or colours from other ambient-light apps.</string>
+
+    <!-- Home -->
+    <string name="home_on">On</string>
+    <string name="home_off">Off</string>
+    <string name="home_settings_link">settings</string>
+    <string name="selected">selected</string>
+    <string name="home_status_off">Lights off</string>
+    <string name="power">Power</string>
+    <string name="protocol">Supports</string>
+    <string name="fr_tl_controller">Controller</string>
+    <string name="fr_tl_usb">USB debugging</string>
+    <string name="fr_tl_strip">Strip</string>
+    <string name="adalight_short">Adalight LED controllers over USB</string>
+    <string name="adalight_long">TV Ambient drives LED controllers that speak the Adalight protocol over USB serial (for example an ESP8266 or Arduino with WS2812B LEDs). Other protocols (WLED, Hyperion, DMX) aren\'t supported yet.</string>
+    <string name="usb_connected">USB connected</string>
+    <string name="usb_not_connected">USB not connected</string>
+
+    <!-- First run -->
+    <string name="fr_step1_title">1 · Plug in the LED controller</string>
+    <string name="fr_step1_text">Connect the controller\'s USB cable to the TV. When Android asks, allow TV Ambient to use it.</string>
+    <string name="fr_step2_title">2 · Turn on USB debugging</string>
+    <string name="fr_dev_off">Developer options are off. Open About, find Build (or Android TV OS build) and press OK on it seven times, until the TV says you\'re a developer. This screen comes back by itself.\n\nWithout USB debugging, Screen mode uses screen recording, which costs more.</string>
+    <string name="fr_dev_on">Developer options are on. Open them and turn on USB debugging (and Network debugging, if your TV lists it). This screen comes back by itself.\n\nWithout USB debugging, Screen mode uses screen recording, which costs more.</string>
+    <string name="fr_adb_on">USB debugging is on. When the TV asks \"Allow USB debugging?\", tick Always allow and press OK.</string>
+    <string name="fr_dev_off_status">Developer options: off</string>
+    <string name="fr_dev_on_status">Developer options: on · USB debugging: off</string>
+    <string name="fr_open_about">Open About</string>
+    <string name="fr_open_dev">Open Developer options</string>
+    <string name="fr_step3_title">3 · Set up the strip</string>
+    <string name="fr_step3_text">Count the LEDs on each side and where LED 1 is. The next screen draws them round the edge so you can match them to the wall.</string>
+    <string name="fr_next">Next</string>
+    <string name="fr_skip">Skip</string>
+    <string name="fr_check">Check now</string>
+    <string name="fr_use_recording">Use screen recording instead</string>
+    <string name="fr_open_strip">Open LED strip setup</string>
+    <string name="fr_done">Done</string>
+
+    <!-- effect groups, previews, Settings messages -->
+    <string name="grp_calm">Calm</string>
+    <string name="grp_nature">Nature</string>
+    <string name="grp_lively">Lively</string>
+    <string name="grp_party">Party</string>
+    <string name="grp_seasonal">Seasonal</string>
+    <string name="grp_setup">For setup</string>
+    <string name="preview_strip">Live preview of the LED colours</string>
+    <string name="preview_tv">The TV with the LEDs round it in their current colours</string>
+    <string name="test_lights_off">The lights are off: turn them on (Red, or Home) to see the test on the strip.</string>
+    <string name="shortcuts_manual">USB debugging is not available: turn on \"TV Ambient remote buttons\" in Accessibility.</string>
+    <string name="stats_need_shortcuts">The stats panel needs Remote shortcuts on (Settings › Remote buttons).</string>
+    <string name="checking">Checking…</string>
+    <string name="shell_ok">USB debugging works: shell screenshots are available.</string>
+    <string name="shell_fail">No answer from USB debugging. Turn it on, and accept \"Allow USB debugging?\" on the TV.</string>
+
+    <!-- screen recording -->
+    <string name="recording_needs_ok">Screen recording needs your OK: open TV Ambient</string>
+    <string name="recording_refused">Screen recording was not allowed. Choose Shell screenshots, or allow it next time.</string>
+    <string name="recording_notice">Screen recording is in use: it costs more than shell screenshots and may make videos stutter.</string>
+</resources>

@@ -1,0 +1,52 @@
+00 2311dffe949fad4d Slow colours
+01 91d421e4b4e0a385 Breathing
+02 67e43155186c9ca1 Gradient
+03 7d63da72d150fd7b Sunset
+04 1464d04c7f36c38b Aurora
+05 3cf7f5ea31fbed33 Ocean
+06 bcf21bf4f4ca9dbe Candle
+07 5b5de3abedc2b9c0 Lava lamp
+08 690d41ed5e481ace Forest
+09 95f73dff154efc32 Twilight
+10 46a2d4f5e0684db5 Warm white
+11 376408b5b5ec7de5 Movie white
+12 bc96bba0f934615f Fire
+13 b2a18c00815d305b Rain
+14 40b63107b85621a5 Thunderstorm
+15 a0731d967a44bdbd Starry night
+16 99b68e1e142020e5 Sunrise
+17 5ef2eecb6a7b8347 Waterfall
+18 61ba8e852ed057f1 Meadow
+19 94a13dd139239af5 Northern sky
+20 fd2de3e39e8e0417 Rainbow swirl ↻
+21 c6db6262f48ad2b0 Rainbow swirl ↺
+22 3eb5c707cb27931f Comet
+23 cdd0a00590c7bf8e Dual comets
+24 cf78c5cb48af2b3c Scanner
+25 b55d2805ff8c2655 Color wipe
+26 12ef134026f2eb75 Color cycle
+27 151bb19cfd3b8f0d Twinkle
+28 9f3ed0809b4e8d25 Heartbeat
+29 a047ed5dea0639b4 Theatre chase
+30 83c2df6f10c87347 Plasma
+31 f44160180c3e88f8 Bouncing balls
+32 15f74ff0f65136a5 Meteor rain
+33 7be268b20e8efb9d Strobe
+34 6c8af7d647b3ad25 Police
+35 03eb6c490cef1bb7 Sparkle
+36 ef9734c002d96c49 Disco
+37 c6dd5eaf61b32f65 Confetti
+38 0e786f69f6c864d5 Rainbow pulse
+39 05e366924e114e15 Festive
+40 eaea9c610d8ce2bb Pastel
+41 66468d270c8c0da8 Ice
+42 80c34f28051e5290 Halloween
+43 61f81e49b0284c2d Valentine
+44 2cec74ddd8406380 Spring
+45 242c913f9484abaf Lantern
+46 5fb68dda8efa6df6 Fireworks
+47 465afd0b6c56cc6d Layout test
+48 10bd1bd9937ed835 White
+49 72b71e3d8e62ed95 Primaries
+50 af0c09d1cde9c435 Grey ramp
+51 124206b6eaded0d5 Corners

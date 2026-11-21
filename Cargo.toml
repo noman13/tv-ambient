@@ -1,0 +1,22 @@
+[workspace]
+resolver = "2"
+members = ["core", "jni"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+rust-version = "1.83"
+
+# TECHNICAL.md §8: small and fast. Panics abort (decided in phase 4): the JNI crate is `no_std` with its own panic
+# handler, no unwinding crosses FFI, and exports check their inputs instead of relying on catch_unwind. Host tests
+# still unwind (cargo always builds the test harness with unwinding).
+[profile.release]
+opt-level = "s"
+lto = "fat"
+codegen-units = 1
+strip = true
+panic = "abort"
+
+[profile.dev]
+panic = "abort"

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature android:name="android.software.leanback" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.usb.host" android:required="false" />
+
+    <!-- Only this app holds it: guards the USB permission receiver below API 33 -->
+    <permission
+        android:name="io.github.noman13.tvambient.permission.INTERNAL"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="io.github.noman13.tvambient.permission.INTERNAL" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+    <!-- Screen recording, the capture fallback without USB debugging -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <!-- A normal permission that satisfies the connectedDevice service type's prerequisite on Android 14. -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Only for the TV's own adbd on 127.0.0.1:5555 (the capture helper). The app talks to nothing else. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Music mode, source A (TECHNICAL.md §14.1): Visualizer on the output mix, i.e. what the TV already plays.
+         No microphone is opened; RECORD_AUDIO is what Android requires for the Visualizer. Self-granted over the
+         app's own ADB, like the accessibility setting. -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:banner="@drawable/banner"
+        android:allowBackup="false"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TvAmbient">
+
+        <!-- Lets the shell profile the release build (simpleperf, Perfetto; TECHNICAL.md §12): no other effect -->
+        <profileable android:shell="true" />
+
+        <activity
+            android:name=".ui.HomeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TvAmbient"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+
+        <!-- Opened from Home, or by the Green button through the key service (not exported). -->
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.TvAmbient" />
+
+        <activity
+            android:name=".ui.FirstRunActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.ProjectionRequestActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TvAmbient.Translucent" />
+
+        <service
+            android:name=".service.AmbientService"
+            android:exported="false"
+            android:foregroundServiceType="connectedDevice|mediaProjection" />
+
+        <!-- Colour-button shortcuts and the stats overlay's window (TECHNICAL.md §11, §12.1). -->
+        <service
+            android:name=".keys.KeyShortcutService"
+            android:exported="true"
+            android:label="@string/shortcuts_label"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service" />
+        </service>
+
+        <!-- ADB only: senders must hold android.permission.DUMP (the shell does; apps can't). -->
+        <receiver
+            android:name=".service.SettingsReceiver"
+            android:exported="true"
+            android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="io.github.noman13.tvambient.SET" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".service.BootReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

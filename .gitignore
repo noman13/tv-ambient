@@ -1,0 +1,28 @@
+# Local notes, study screenshots, handoff prompts: never committed
+work/
+shots/
+
+# Perfetto traces stay out of git
+*.pftrace
+*.pftrace.xz
+
+# Build output
+build/
+.gradle/
+target/
+dist/
+*.apk
+local.properties
+
+# Secrets
+*.jks
+*.keystore
+keystore.properties
+adbkey
+adbkey.pub
+
+# Rust and Android build output
+app/src/main/jniLibs/
+.kotlin/
+*.iml
+.idea/

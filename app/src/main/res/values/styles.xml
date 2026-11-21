@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Translucent: only the screen-recording consent step, which must not hide what plays -->
+    <style name="Theme.TvAmbient.Translucent" parent="@android:style/Theme.DeviceDefault.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+    <!-- Home, Settings and first run: solid, the app's own background -->
+    <style name="Theme.TvAmbient" parent="@android:style/Theme.DeviceDefault.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+    </style>
+</resources>

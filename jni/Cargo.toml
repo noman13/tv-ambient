@@ -1,0 +1,15 @@
+[package]
+name = "tvambient-jni"
+description = "Thin JNI exports over tvambient-core: libtvambient.so (no logic here)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+publish = false
+
+[lib]
+name = "tvambient"
+crate-type = ["cdylib"]
+
+[dependencies]
+tvambient-core = { path = "../core" }
